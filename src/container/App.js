@@ -11,9 +11,10 @@ class App extends Component {
     this.state={imageDatasArr: this.getImageDatas(imageDatas),imgsArrangeArr:[]};
   }
   
-
-
-  // 利用自执行函数， 将图片名信息转成图片URL路径信息
+  /**
+   * 将图片名信息转成图片URL路径信息
+   * @param {*} imageDatasArr 
+   */
   getImageDatas(imageDatasArr) {
     for (let i = 0, j = imageDatasArr.length; i < j; i++) {
       let singleImageData = imageDatasArr[i];

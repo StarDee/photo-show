@@ -1,7 +1,11 @@
 .img-figure {
     margin: 0;
+    transition: all .25s ease-in-out;
+    user-select: none;
 }
 
 .is-inverse{
-    margin-top: 20px;
+    transform: rotateY(180deg);
+    opacity: .3;
+    transition: all .25s ease-in-out;
 }

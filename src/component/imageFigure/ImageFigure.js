@@ -1,9 +1,9 @@
 import React from "react";
-import './imageFigure.css'
+import "./imageFigure.css";
 
 class ImageFigure extends React.Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
   }
   handleClick(e) {
     e.stopPropagation();
@@ -11,18 +11,16 @@ class ImageFigure extends React.Component {
     this.props.inverse();
   }
 
-
   render() {
     let imgFigureClassName = "img-figure",
       styleObj;
     imgFigureClassName += this.props.arrange.isInverse ? " is-inverse" : "";
     return (
       <figure
-        className={imgFigureClassName}
         style={styleObj}
-        onClick={this.handleClick}
+        onClick={this.handleClick.bind(this)}
       >
-        <img src={this.props.data.imageURL} alt={this.props.data.title} />
+        <img className={imgFigureClassName} src={this.props.data.imageURL} alt={this.props.data.title} />
         <figcaption>
           <h2 className="img-title">{this.props.data.title}</h2>
           <div className="img-back" onClick={this.handleClick}>
